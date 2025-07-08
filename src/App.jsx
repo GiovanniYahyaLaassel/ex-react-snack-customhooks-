@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import useSwitch from './hooks/useSwitch';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isOn, toggle] = useSwitch();
 
   return (
-    <>
+
       <div>
-         <h1>React Custom Hook - Snack 1</h1>
+         <h1>Il valore è:{isOn ? "ON" : "OFF"}</h1>
+         <button onClick={toggle}>Cambia Stato</button>
       </div>
-    </>
   )
 }
 
