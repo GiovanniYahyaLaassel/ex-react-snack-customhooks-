@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import useSwitch from './hooks/useSwitch';
+import useSwitch from './useSwitch';
 
 function App() {
   const [isOn, toggle] = useSwitch();
